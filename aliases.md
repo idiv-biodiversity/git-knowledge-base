@@ -59,6 +59,19 @@ $ git config --global alias.fire \
          git push origin wip/fire/$USER"'
 ```
 
+Alternatively, you can use this shell script and put it on your `PATH`:
+
+```bash
+#!/bin/bash
+
+FIRE_BRANCH="wip/fire/$USER-$(date +%s)"
+
+git checkout -b "$FIRE_BRANCH" &&
+git stage -A &&
+git commit -m 'WIP: fire alert!' &&
+git push origin "$FIRE_BRANCH"
+```
+
 
 [pro-git-aliases]: https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases
 [git-lol-origin]: http://uberblo.gs/2010/12/git-lol-the-other-git-log
