@@ -1,5 +1,8 @@
 # useful git aliases
 
+* toc
+{:toc}
+
 ## unstage
 
 There is a git command to add a file to the staging area: `git stage`. It is a synonym, not an alias, to `git add`. However, there is no corresponding `git unstage` to unstage a file. The following alias fills this void:
