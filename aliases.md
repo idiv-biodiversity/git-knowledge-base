@@ -59,7 +59,7 @@ $ git config --global alias.fire \
          git push origin wip/fire/$USER"'
 ```
 
-Alternatively, you can use this shell script and put it on your `PATH`:
+Alternatively, you can use this shell script, name it `git-fire`, make it executable and put it on your `PATH`:
 
 ```bash
 #!/bin/bash
