@@ -1,6 +1,6 @@
 # git knowledge base
 
-a collection of best practices and useful tips around git
+**git** is a very **powerful** set of tools for version control. There are a lot of commands and you can do a lot of things in a lot of different ways. This knowledge base provides a **collection of tips, best practices and workflows** to steer you through the forest of choices you can make with git.
 
 ## TOC
 
