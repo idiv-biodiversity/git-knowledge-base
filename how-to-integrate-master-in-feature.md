@@ -1,4 +1,5 @@
 # how to integrate changes: from master to feature branch
+{:.no_toc}
 
 * toc
 {:toc}

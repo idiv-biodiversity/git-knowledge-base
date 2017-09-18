@@ -1,4 +1,4 @@
-## Branch Naming Conventions
+# Branch Naming Conventions
 
 Independent of the used **branching model** (TODO link) these are generally useful guidelines:
 

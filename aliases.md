@@ -1,4 +1,5 @@
 # useful git aliases
+{:.no_toc}
 
 * toc
 {:toc}
