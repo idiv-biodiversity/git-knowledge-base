@@ -7,6 +7,7 @@
 1.  beginner
     1.  [aliases](aliases.md)
     1.  [branch naming conventions](branch-naming-conventions.md)
+    1.  [commit message conventions](commit-message-conventions.md)
 1.  advanced
     1.  how to integrate changes
         1.  [from master to feature branch](how-to-integrate-master-in-feature.md)
