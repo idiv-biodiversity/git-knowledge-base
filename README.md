@@ -5,6 +5,7 @@
 ## TOC
 
 1.  beginner
+    1.  [aliases](aliases.md)
     1.  [branch naming conventions](branch-naming-conventions.md)
 1.  advanced
     1.  [rebase vs merge](rebase-vs-merge.md)
