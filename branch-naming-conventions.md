@@ -1,6 +1,6 @@
 # Branch Naming Conventions
 
-Independent of the used **branching model** (TODO link) these are generally useful guidelines:
+Independent of the used [branching model](branching-models.md) these are generally useful guidelines:
 
 1.  use dashes to separate words in branch names
 
