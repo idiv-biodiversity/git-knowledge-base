@@ -91,3 +91,7 @@ This boosts performance compared to the old exhaustive pattern match. On
 a larger accounting file this improved the runtime from 92 minutes to 51
 minutes.
 ```
+
+---
+
+[back to index](index.html)

@@ -23,3 +23,7 @@ Finally, you also want to rebase the *feature branch* on top of the new *source 
 ```bash
 git rebase master wip/topic/feature
 ```
+
+---
+
+[back to index](index.html)

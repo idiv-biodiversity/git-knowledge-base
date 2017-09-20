@@ -76,6 +76,10 @@ git commit -m 'WIP: fire alert!' &&
 git push origin "$FIRE_BRANCH"
 ```
 
+---
+
+[back to index](index.html)
+
 
 [pro-git-aliases]: https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases
 [git-lol-origin]: http://uberblo.gs/2010/12/git-lol-the-other-git-log

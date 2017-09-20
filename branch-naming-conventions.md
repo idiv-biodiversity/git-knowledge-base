@@ -45,3 +45,7 @@ Independent of the used **branching model** (TODO link) these are generally usef
 1.  don't fear renaming
 
     Most branches are essentially temporary names attached to commits. Don't fear renaming them.
+
+---
+
+[back to index](index.html)

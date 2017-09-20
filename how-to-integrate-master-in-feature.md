@@ -115,3 +115,7 @@ $ git push --force[-with-lease] origin topic/feature
 ---
 
 **TODO:** How and where are merge conflicts handled? I guess (not confirmed), that merging master will resolve the conflicts inside of the merge commit, while rebasing handles the conflicts immediately in the individual commits that are applied. How are these merge commits resolved/handled when **rebase and merge** is used to merge the feature branch back to master?
+
+---
+
+[back to index](index.html)
