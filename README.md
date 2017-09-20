@@ -11,4 +11,5 @@
 1.  advanced
     1.  how to integrate changes
         1.  [from master to feature branch](how-to-integrate-master-in-feature.md)
+    1.  [cherry-pick files](cherry-pick-files.md)
 1.  expert
