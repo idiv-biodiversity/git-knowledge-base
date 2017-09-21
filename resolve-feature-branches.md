@@ -22,11 +22,13 @@ $ git lol
 |/
 * 03f4f8d previous commit
 * 62a0ee9 ...
+
 $ git rebase master
 First, rewinding head to replay your work on top of it...
 Applying: adds feature foo
 Applying: adds blah to feature
 Applying: fixes issue with feature
+
 $ git lol
 * 76e29d1 (HEAD -> topic/feature) fixes issue with feature
 * 5428f8d adds blah to feature
@@ -47,6 +49,7 @@ Merge made by the 'recursive' strategy.
  foo | 3 +++
  1 file changed, 3 insertions(+)
  create mode 100644 foo
+
 $ git lol
 *   f17ba26 (HEAD -> master) Merge branch 'topic/feature'
 |\
@@ -60,11 +63,9 @@ $ git lol
 * 62a0ee9 ...
 ```
 
-**Note:** All histories *before the merge* below are already rebased like this!
-
 ## resolving methods
 
-History before the merge:
+The history *before the merge* for all examples below looks like this:
 
 ```
 * d2e7011 (HEAD -> topic/feature) fixes issue with feature
@@ -76,11 +77,22 @@ History before the merge:
 * 62a0ee9 ...
 ```
 
+As you can see, **topic/feature** has already been rebased on **master**.
+
 ### merge with fast-forward
 
 The goal of this method is to have the resulting history look like as if the **topic/feature** branch commits were created directly on **master**.
 
 ```console
+$ git lol
+* d2e7011 (HEAD -> topic/feature) fixes issue with feature
+* f1a50c4 adds blah to feature
+* 174ed5d adds feature foo
+* 2985b6b (master) blah blah
+* ebe0262 blah
+* 03f4f8d previous commit
+* 62a0ee9 ...
+
 $ git checkout master
 Switched to branch 'master'
 $ git merge --ff-only topic/feature
@@ -89,11 +101,8 @@ Fast-forward
  foo | 3 +++
  1 file changed, 3 insertions(+)
  create mode 100644 foo
-```
 
-History after merge:
-
-```
+$ git lol
 * c6121fd (HEAD -> master, topic/feature) fixes issue with feature
 * fcbba2d adds blah to feature
 * 2e09b2a adds feature foo
@@ -108,6 +117,15 @@ History after merge:
 The relevant difference to the other methods is that you preserve **topic/feature** history.
 
 ```console
+$ git lol
+* d2e7011 (HEAD -> topic/feature) fixes issue with feature
+* f1a50c4 adds blah to feature
+* 174ed5d adds feature foo
+* 2985b6b (master) blah blah
+* ebe0262 blah
+* 03f4f8d previous commit
+* 62a0ee9 ...
+
 $ git checkout master
 Switched to branch 'master'
 $ git merge --no-ff --no-edit topic/feature
@@ -115,11 +133,8 @@ Merge made by the 'recursive' strategy.
  foo | 3 +++
  1 file changed, 3 insertions(+)
  create mode 100644 foo
-```
 
-History after merge:
-
-```
+$ git lol
 *   4ea0082 (HEAD -> master) Merge branch 'topic/feature'
 |\
 | * c6121fd (topic/feature) fixes issue with feature
@@ -139,6 +154,15 @@ The history is still considered linear because all commits reside on one side of
 This creates a single commit on top of **master**. All history of **topic/feature** gets condensed into a single commit. This way to resolve a feature branch should be used if the resulting diff is relatively small.
 
 ```console
+$ git lol
+* d2e7011 (HEAD -> topic/feature) fixes issue with feature
+* f1a50c4 adds blah to feature
+* 174ed5d adds feature foo
+* 2985b6b (master) blah blah
+* ebe0262 blah
+* 03f4f8d previous commit
+* 62a0ee9 ...
+
 $ git checkout master
 Switched to branch 'master'
 $ git merge --squash topic/feature
@@ -152,15 +176,20 @@ $ git commit -v
 [master 66fcf8b] adds feature foo
  1 file changed, 3 insertions(+)
  create mode 100644 foo
+
+$ git lol
+* 66fcf8b (HEAD -> master) adds feature foo
+| * c6121fd (topic/feature) fixes issue with feature
+| * fcbba2d adds blah to feature
+| * 2e09b2a adds feature foo
+|/
+* 2985b6b blah blah
+* ebe0262 blah
+* 03f4f8d previous commit
+* 62a0ee9 ...
 ```
 
-History after merge:
-
-```
-* 6db1876 (HEAD -> master) adds feature foo
-* 2d9d186 previous commit
-* ...
-```
+**topic/feature** still exists in its original form, however, **master** has a new commit containing everything that **topic/feature** does. Now, **topic/feature** can be removed.
 
 ## cleaning up feature branches
 
