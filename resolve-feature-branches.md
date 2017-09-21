@@ -1,7 +1,9 @@
 # How to Resolve Feature Branches
 {:.no_toc}
 
-It is considered good practice to commit everything to feature branches before integrating these changes in the branch it forked off from (usually **master**). Some [branching models](branching-models.md) even require it. There are a few different ways how to resolve a feature branch and integrate the changes in the originating branch.
+Whenever you start developing something new, it is considered good practice to commit these changes to a feature branch before you integrate them in **master**. This way, you can test these changes without corrupting **master**. Some [branching models](branching-models.md) even require this workflow.
+
+There are a few different ways how to resolve such a feature branch and integrate the changes in the originating branch which are discussed in this document.
 
 **Note:** In the following examples we will always use **master** for the *originating branch* and **topic/feature** for the *feature branch*.
 
@@ -10,7 +12,7 @@ It is considered good practice to commit everything to feature branches before i
 
 ## rewrite feature branch history
 
-`git rebase` is **the** method to keep your history **linear**. It is recommended to **rebase before every merge** on top of the latest **master**. You should also not hesitate to rewrite **topic/feature** history before you merge so the resulting **master** history will look good.
+`git rebase` is **the** method to keep your history **linear**. It is recommended to **rebase before every merge** on top of the latest **master**.
 
 ```console
 $ git lol
@@ -63,6 +65,8 @@ $ git lol
 * 62a0ee9 ...
 ```
 
+You should also not hesitate to rewrite **topic/feature** history before you merge. This is usually achieved by *interactive rebase'ing*. Rewrite until the feature branch history looks good.
+
 ## resolving methods
 
 The history *before the merge* for all examples below looks like this:
@@ -112,6 +116,8 @@ $ git lol
 * 62a0ee9 ...
 ```
 
+As you can see from the resulting history, **master** has just been moved forward to the commit **topic/feature** sits on. That is where the name **fast-forward** comes from.
+
 ### merge with merge commit
 
 The relevant difference to the other methods is that you preserve **topic/feature** history.
@@ -147,7 +153,7 @@ $ git lol
 * 62a0ee9 ...
 ```
 
-The history is still considered linear because all commits reside on one side of the branch, that is also why it is important to **rebase first**.
+The history is still *considered linear* because all commits reside on one side of the branch, that is also why it is important to **rebase first**.
 
 ### squash merge
 
