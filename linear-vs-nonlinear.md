@@ -27,7 +27,7 @@ Non-linear history example:
 * 62a0ee9 ...
 ```
 
-In general, it is recommended to strive for a linear history, because it is easier to figure out what happened than with a non-linear history. Non-linear history becomes exceedingly unreadable when a lot of branches forked off and merged across a longer commit range.
+In general, it is recommended to **strive for a linear history**, because it is easier to figure out what happened than with a non-linear history. Non-linear history becomes exceedingly unreadable when a lot of branches forked off and merged across a longer commit range.
 
 ---
 
