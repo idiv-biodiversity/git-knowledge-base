@@ -2,7 +2,21 @@
 
 When many colleagues work with the **master** branch directly, conflicts can arise when pushing. **TL;DR:** Always **rebase** instead of **merge**! This creates a **clean, linear commit history**.
 
-If you have made some changes directly on the **master** branch and want to **push** them, the push will either be *fast-forwarded* or git will tell you that other changes have been made to **master**. You will have to manually resolve the latter case and for this there are two choices:
+If you have made some changes directly on the **master** branch and want to **push** them, the push will either be *fast-forwarded* or git will tell you that other changes have been made to **master**:
+
+```
+$ git push
+To /home/umcdev/projects/git-demo/pull-merge-vs-rebase.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to '/home/umcdev/projects/git-demo/pull-merge-vs-rebase.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+You will have to manually resolve this case and there are two choices:
 
 1.  **merge origin/master** into your **master** and push
 
