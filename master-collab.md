@@ -4,7 +4,7 @@ When many colleagues work with the **master** branch directly, conflicts can ari
 
 If you have made some changes directly on the **master** branch and want to **push** them, the push will either be *fast-forwarded* or git will tell you that other changes have been made to **master**:
 
-```
+```console
 $ git push
 To /home/umcdev/projects/git-demo/pull-merge-vs-rebase.git
  ! [rejected]        master -> master (fetch first)
