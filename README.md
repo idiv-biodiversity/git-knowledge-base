@@ -9,6 +9,7 @@
     1.  [branch naming conventions](branch-naming-conventions.md)
     1.  [commit message conventions](commit-message-conventions.md)
     1.  [linear vs non-linear history](linear-vs-nonlinear.md)
+    1.  [collaboration on master](master-collab.md)
 1.  advanced
     1.  [branching models](branching-models.md)
     1.  how to integrate changes
