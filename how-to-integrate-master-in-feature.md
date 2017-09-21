@@ -59,7 +59,7 @@ blah | 3 +++
 create mode 100644 blah
 ```
 
-Resulting history:
+This results in a **non-linear** history:
 
 ```
 *   7123a38 (HEAD -> topic/feature) Merge branch 'master' into topic/feature
@@ -93,7 +93,7 @@ Applying: adds blah to feature
 Applying: fixes issue with feature
 ```
 
-Resulting history:
+This results in a **linear** history:
 
 ```
 * 8bdcaee (HEAD -> topic/feature) fixes issue with feature
