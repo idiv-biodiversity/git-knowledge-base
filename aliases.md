@@ -76,6 +76,8 @@ git commit -m 'WIP: fire alert!' &&
 git push origin "$FIRE_BRANCH"
 ```
 
+![git-fire-meme](img/git-fire-meme.png)
+
 ---
 
 [back to index](index.html)
