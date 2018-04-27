@@ -16,7 +16,7 @@ Independent of the used [branching model](branching-models.md) these are general
 
     - **topic/*** feature or feature set
     - **release/*** prepare release
-    - **hotfix/*** bugs fix
+    - **hotfix/*** resolves an issue
     - **wip/*** work in progress
 
     examples:
