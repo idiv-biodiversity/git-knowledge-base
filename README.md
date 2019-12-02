@@ -16,5 +16,6 @@
         1.  [how to resolve feature branches](resolve-feature-branches.md)
         1.  [from master to feature branch](how-to-integrate-master-in-feature.md)
     1.  [cherry-pick files](cherry-pick-files.md)
+    1.  [revert and keep/tag bad changes](revert-n-tag.md)
 1.  expert
 1.  [cheat sheets](https://idiv-biodiversity.github.io/git-cheat-sheet/)
