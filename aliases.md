@@ -28,8 +28,6 @@ This set of options prints a pretty textual representation of the project histor
 
 ![git lol](img/git-lol.png)
 
-The origin of the `git lol` alias is [this blog entry][git-lol-origin].
-
 
 ## in case of fire
 
@@ -84,5 +82,4 @@ git push origin "$FIRE_BRANCH"
 
 
 [pro-git-aliases]: https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases
-[git-lol-origin]: http://uberblo.gs/2010/12/git-lol-the-other-git-log
 [git-fire]: https://github.com/louim/in-case-of-fire
